@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+
+int FrequencyNumber(int Number ,short Digit)
+{
+	int Remainder = 0;
+	int counter = 0;
+
+	while (Number>0)
+	{
+		Remainder = Number % 10;
+		Number = Number / 10;
+		if (Remainder == Digit)
+			counter++;
+	}
+	return counter;
+
+	
+}
+
+void PrintFrequency(int Number, short Digit)
+{
+	int counter = FrequencyNumber(Number, Digit);
+
+	cout << "Digit " << Digit << " Frequency is " << counter << " Time(s)" << endl;
+
+
+
+
+}
+
+
+int main()
+{
+	int Number = ReadPositiveNumber("please enter positive number ?");
+	short Digit = ReadPositiveNumber("please enter digit to check  frequency ");
+	PrintFrequency(Number, Digit);
+		return 0;
+}
