@@ -15,13 +15,13 @@ int ReadPositiveNumber(string Message)
 
 void PrintInvertedNumberPattern(int Number)
 {
-    for (int i = Number; i > 0; i--) // يبدأ من العدد المدخل وينقص حتى 1
+    for (int i = Number; i > 0; i--) 
     {
-        for (int j = 1; j <= i; j++) // يطبع العدد الحالي `i` `j` مرات
+        for (int j = 1; j <= i; j++) 
         {
             cout << char(i+64);
         }
-        cout << endl; // الانتقال إلى السطر التالي بعد طباعة كل صف
+        cout << endl; 
     }
 }
 
